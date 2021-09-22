@@ -1,0 +1,5 @@
+# Logfile created on 2021-09-22 14:40:21 +0900 by logger.rb/66358
+F, [2021-09-22T14:40:21.995772 #6334] FATAL -- : 例外発生： No such file or directory @ rb_sysopen - sample.txt
+F, [2021-09-22T14:40:21.995967 #6334] FATAL -- : No such file or directory @ rb_sysopen - sample.txt (Errno::ENOENT)
+test.rb:13:in `foreach'
+test.rb:13:in `<main>'

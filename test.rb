@@ -1,14 +1,21 @@
-# -*- coding: utf-8 -*-
-require 'net/ping'
+require 'logger'
+ 
+logger = Logger.new('./filescan.log')
+ 
+filename = "sample.txt"
+ 
+begin
+  File.foreach(filename) do |line|
+  
+    unless line.start_with?("#")
 
-## Pingの宛て先を指定して下さい
-addr = 'google.co.jp'
+      logger.error("スキャンエラー: #{line.chomp}")
 
-pinger = Net::Ping::External.new(addr)
-
-## Pingが通るかどうかテストします
-if pinger.ping?
-  puts 'reachable'
-else
-  puts 'unreachable'
+    else
+      puts line
+    end
+  end
+rescue => err
+  logger.fatal("例外発生： #{err.message}")
+  logger.fatal(err)
 end
