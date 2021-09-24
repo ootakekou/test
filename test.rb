@@ -10,7 +10,7 @@ begin
     unless n.start_with?("#")
 
       logger.error("スキャンエラー: #{n.chomp}")
-
+      
     else
       puts n
     end
