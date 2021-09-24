@@ -3,3 +3,7 @@ F, [2021-09-22T14:40:21.995772 #6334] FATAL -- : 例外発生： No such file or
 F, [2021-09-22T14:40:21.995967 #6334] FATAL -- : No such file or directory @ rb_sysopen - sample.txt (Errno::ENOENT)
 test.rb:13:in `foreach'
 test.rb:13:in `<main>'
+F, [2021-09-24T14:53:30.025181 #2791] FATAL -- : 例外発生： No such file or directory @ rb_sysopen - rubytest.txt
+F, [2021-09-24T14:53:30.025776 #2791] FATAL -- : No such file or directory @ rb_sysopen - rubytest.txt (Errno::ENOENT)
+test.rb:8:in `foreach'
+test.rb:8:in `<main>'

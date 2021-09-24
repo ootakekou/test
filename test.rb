@@ -2,17 +2,17 @@ require 'logger'
  
 logger = Logger.new('./filescan.log')
  
-filename = "sample.txt"
+filename = "rubytest.txt"
  
 begin
-  File.foreach(filename) do |line|
+  File.foreach(filename) do |n|
   
-    unless line.start_with?("#")
+    unless n.start_with?("#")
 
-      logger.error("スキャンエラー: #{line.chomp}")
+      logger.error("スキャンエラー: #{n.chomp}")
 
     else
-      puts line
+      puts n
     end
   end
 rescue => err
